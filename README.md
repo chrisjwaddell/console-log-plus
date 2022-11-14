@@ -7,15 +7,15 @@ Console Log Plus adds color and size formatting to a browser console.log message
 
 
 ## How to use it
-In your HTML file. Put at the top of the script tags: \
+In your HTML file. Put at the top of the script tags:
 ```
 <script src="../log.js"></script>
 ```
 
 The console.log message is this format: \
-```
+``
 console.log('%c' + log.fnName(...arguments) + ' -  message', log.logType('info'))
-```
+``
 
 If it's a console.log messge on the global scope, add: \
 ```
@@ -43,6 +43,7 @@ You could add the following to your javascript.json file:
 }
 ```
 
+Console Log Plus works on the fact that you can run simple, well tested functions from within a console.log statement.
 
 You can add settings for the message color and size.
 
