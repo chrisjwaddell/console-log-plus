@@ -40,6 +40,12 @@
 
 
     console.log("%c" + "message", log.logType("new"))
+
+
+    function anyFunction(a, b, c) {
+        console.log('%c' + log.fnName(...arguments) + ' - My console log message', log.logType('info'))
+    }
+    anyFunction(1, 2, 3)
 </script>
 
 </html>

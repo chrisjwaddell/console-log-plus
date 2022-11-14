@@ -2,10 +2,14 @@
 Console log Plus adds color and size formatting to a browser console.log message. It also automatically adds function name and function arguments to the start of the message to make it easier to debug. (This only works for non-strict mode.)
 
 
+
+![Console Log Plus message example](https://github.com/chrisjwaddell/console-log-plus/blob/main/msg.jpg)
+
+
 ## How to use it
 In your HTML file. Put at the top of the script tags: \
 ``
-cc<script src="../log.js"></script>
+\<script src="../log.js"></script>
 ``
 
 The console.log message is this format: \
