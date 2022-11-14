@@ -5,7 +5,7 @@ Console log Plus adds color and size formatting to a browser console.log message
 ## How to use it
 In your HTML file. Put at the top of the script tags: \
 ``
-<script src="../log.js"></script>
+cc<script src="../log.js"></script>
 ``
 
 The console.log message is this format: \
@@ -22,7 +22,7 @@ It's a good idea to add a code snippet to Visual Studio to easily add this conso
 
 You could add the following to your javascript.json file:
 
-``
+```
 "Log with extra features": {
     "prefix": "jco",
 	"body": [
@@ -37,7 +37,7 @@ You could add the following to your javascript.json file:
 	],
 	"description": "Log with extra features globally. Use debugger or breakpoint if applicable."
 }
-``
+```
 
 
 You can add settings for the message color and size.
