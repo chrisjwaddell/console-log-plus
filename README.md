@@ -1,5 +1,5 @@
 # Console Log Plus
-Console Log Plus adds color and size formatting to a browser console.log message. It also automatically adds function name and function arguments to the start of the message to make it easier to debug. (This only works for non-strict mode.)
+Console Log Plus brings color and size formatting to a browser console.log message. It also automatically adds function name and function arguments to the start of the message to make it easier to debug. (This only works for non-strict mode.)
 
 
 
@@ -18,11 +18,11 @@ console.log('%c' + log.fnName(...arguments) + ' -  message', log.logType('info')
 ``
 
 If it's a console.log messge on the global scope, add: \
-```
+``
 console.log('%c' + ' -  message', log.logType('info'))
-```
+``
 
-It's a good idea to add a code snippet to Visual Studio to easily add this console log format. Instead of typing out ``console.log(xxxxx)``, type out ``jco``.
+It's a good idea to add a code snippet to Visual Studio to easily add this console log format. Instead of typing out ``console.log(xxxxx)``, type out ``jco``. It makes it faster and better to use console log statements.
 
 You could add the following to your javascript.json file:
 
@@ -45,5 +45,5 @@ You could add the following to your javascript.json file:
 
 Console Log Plus works on the fact that you can run simple, well tested functions from within a console.log statement.
 
-You can add settings for the message color and size.
+You can add settings for the message color and size. You can have categories of logs. It's best to have a basic few categories and to keep them similar from project to project.
 
