@@ -8,6 +8,12 @@ Console Log Plus brings color and size formatting to a browser console.log messa
 ## How to use it
 In your HTML file. Put at the top of the script tags:
 ```
+<script src="https://raw.githubusercontent.com/chrisjwaddell/console-log-plus/main/log.js"></script>
+```
+
+Or download log.js and put it in your project and put at the top of your HTML file:
+
+```
 <script src="../log.js"></script>
 ```
 
@@ -21,7 +27,7 @@ If it's a console.log messge on the global scope, add: \
 console.log('%c' + ' -  message', log.logType('info'))
 ``
 
-It's a good idea to use Visual Studio code snippets to make this easier (see below).
+It's a good idea to use Visual Studio code snippets to type this out easily with 3 letters (see below).
 
 Console Log Plus works on the fact that you can run simple, well tested functions from within a console.log statement.
 
