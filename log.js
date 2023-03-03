@@ -25,13 +25,13 @@ let log = function () {
         {
             logType: "new",
             description: "Working on code temporarily, fix and move on",
-            color: "#22aa22",
+            color: "#cc5522",
             size: 17
         },
         {
             logType: "watch",
             description: "To watch variables",
-            color: "#22ffdd",
+            color: "#22cc77",
             size: 15
         }
     ]

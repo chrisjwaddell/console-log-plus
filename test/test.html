@@ -25,27 +25,38 @@
 
 </body>
 <script>
+    let b = 5
+
     function nonStrictFunction(a, b, c) {
-        console.log("%c" + log.fnName(...arguments) + " - message", log.logType("info"))
+        let d = a % c
+        console.log("%c" + log.fnName(...arguments) + `    d=a;   d=${d}`, log.logType("info"))
     }
 
     nonStrictFunction(1, 11, 123)
 
-    function strictFunction(a, b, c) {
-        "use strict";
-
-        console.log("%c" + log.fnName(...arguments) + " - message", log.logType("info"))
-    }
-    strictFunction(1, "22", "c")
-
-
-    console.log("%c" + "message", log.logType("new"))
+    console.log("%c" + `b=${5}    ` +
+        "This is a new message. New messages are to temporarily see things in the flow of the code.", log
+        .logType("new"))
 
 
     function anyFunction(a, b, c) {
-        console.log('%c' + log.fnName(...arguments) + ' - My console log message', log.logType('info'))
+        console.log('%c' + log.fnName(...arguments) + ' - I want to see argument values', log.logType('info'))
     }
     anyFunction(1, 2, 3)
+
+    // It will return true for undefined objects
+    function isObjectEmpty(value) {
+        console.log('%c' + log.fnName(...arguments) + '', log.logType('watch'))
+        return (
+            Object.prototype.toString.call(value) === '[object Object]' &&
+            JSON.stringify(value) === '{}'
+        );
+    }
+
+    isObjectEmpty({
+        a: 1,
+        b: 2
+    })
 </script>
 
 </html>
