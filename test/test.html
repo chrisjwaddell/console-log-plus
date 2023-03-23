@@ -29,7 +29,7 @@
 
     function nonStrictFunction(a, b, c) {
         let d = a % c
-        console.log("%c" + log.fnName(...arguments) + `    d=a;   d=${d}`, log.logType("info"))
+        console.log("%c" + log.fnName(...arguments) + `    d=a % c;   d=${d}`, log.logType("info"))
     }
 
     nonStrictFunction(1, 11, 123)
