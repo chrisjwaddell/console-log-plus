@@ -26,6 +26,12 @@ let log = (function () {
 			size: 20,
 		},
 		{
+			logType: "error",
+			description: "For errors",
+			color: "#d22b2a",
+			size: 20,
+		},
+		{
 			logType: "new",
 			description: "Working on code temporarily, fix and move on",
 			color: "#cc5522",
