@@ -21,9 +21,17 @@ let log = (function () {
 		},
 		{
 			logType: "event",
-			description: "For events",
+			description:
+				"For events. To help distinguish it from other functions.",
 			color: "#0643d4",
 			size: 20,
+		},
+		{
+			logType: "function",
+			description:
+				"It helps to put this at the start of a function to see the function flow.",
+			color: "#000259",
+			size: 18,
 		},
 		{
 			logType: "error",
