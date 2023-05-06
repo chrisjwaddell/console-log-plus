@@ -24,25 +24,25 @@ let log = (function () {
 			description:
 				"For events. To help distinguish it from other functions.",
 			color: "#0643d4",
-			size: 20,
+			size: 25,
 		},
 		{
 			logType: "function",
 			description:
-				"It helps to put this at the start of a function to see the function flow.",
+				"Helps to put this at the start of a function to see the function flow.",
 			color: "#000259",
-			size: 18,
+			size: 22,
 		},
 		{
 			logType: "error",
 			description: "For errors",
 			color: "#d22b2a",
-			size: 20,
+			size: 17,
 		},
 		{
 			logType: "new",
 			description: "Working on code temporarily, fix and move on",
-			color: "#cc5522",
+			color: "#551aaa",
 			size: 17,
 		},
 		{
