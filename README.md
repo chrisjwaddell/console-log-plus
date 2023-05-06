@@ -6,17 +6,7 @@ start of the message to make it easier to debug. (This only works for non-strict
 mode.)
 
 <h2>Logs appear like this</h2>
-<p style="font-size: 15px;color:#4499ff">info - Information</p>
-<p style="font-size: 25px;color:#0643d4">event - For events. To help distinguish it from other functions.</p>
-<p style="font-size: 22px;color:#000259">function - It helps to put this at the start of a function to see the function flow.</p>
-<p style="font-size: 17px;color:#f22b2a">error - For errors</p>
-<p style="font-size: 18px;color:#4499bb">new - Working on code temporarily, fix and move on</p>
-<p style="font-size: 15px;color:#22cc77">watch - To watch variables</p>
-<p style="font-size: 15px;color:#ff1a16">red - Make the console log message red</p>
-<p style="font-size: 15px;color:#066a00">green - Make the console log message green</p>
-<p style="font-size: 15px;color:#9f1a9b">purple - Make the console log message purple</p>
-
-![Console Log Plus message example](https://github.com/chrisjwaddell/console-log-plus/blob/main/msg.jpg)
+![Console Log Plus message example](https://github.com/chrisjwaddell/console-log-plus/blob/main/logs.jpg)
 
 ## How to use it
 
