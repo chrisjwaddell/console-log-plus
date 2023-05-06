@@ -12,17 +12,42 @@
             background-color: #ffffff;
             margin: 0;
         }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
     </style>
 
     <script type="application/javascript" src="../log.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/chrisjwaddell/console-log-plus/main/log.js"></script> -->
+    <script type="application/javascript" src="./test.js"></script>
 </head>
 
 <body>
-    <h1>Console Log Plus</h1>
-    <h2>Console log with extra features</h2>
+    <div class="container">
+        <h1>Console Log Plus</h1>
+        <h2>Console log with extra features</h2>
 
+        <h2>Logs appear like this</h2>
+        <p style="font-size: 15px;color:#4499ff">info - Information</p>
+        <p style="font-size: 25px;color:#0643d4">event - For events. To help distinguish it from other functions.</p>
+        <p style="font-size: 22px;color:#000259">function - It helps to put this at the start of a function to see the
+            function
+            flow.</p>
+        <p style="font-size: 17px;color:#f22b2a">error - For errors</p>
+        <p style="font-size: 18px;color:#4499bb">new - Working on code temporarily, fix and move on</p>
+        <p style="font-size: 15px;color:#22cc77">watch - To watch variables</p>
+        <p style="font-size: 15px;color:#ff1a16">red - Make the console log message red</p>
+        <p style="font-size: 15px;color:#066a00">green - Make the console log message green</p>
+        <p style="font-size: 15px;color:#9f1a9b">purple - Make the console log message purple</p>
 
-
+    </div>
 </body>
 <script>
     let b = 5
@@ -36,7 +61,7 @@
 
     console.log("%c" + `b=${5}    ` +
         "This is a new message. New messages are to temporarily see things in the flow of the code.", log
-        .logType("new"))
+            .logType("new"))
 
 
     function anyFunction(a, b, c) {
@@ -57,6 +82,51 @@
         a: 1,
         b: 2
     })
+
+    console.log("%c" + "info - information", log.logType("info"))
+    console.log(
+        "%c" + "event - For events. To help distinguish it from other functions.",
+        log.logType("event")
+    )
+    console.log(
+        "%c" +
+        "function - Helps to put this at the start of a function to see the function flow.",
+        log.logType("function")
+    )
+    console.log("%c" + "error - For errors", log.logType("error"))
+    console.log(
+        "%c" + "new - Working on code temporarily, fix and move on",
+        log.logType("new")
+    )
+    console.log("%c" + "watch - To watch variables", log.logType("watch"))
+    console.log("%c" + "red - Make the console log message red", log.logType("red"))
+    console.log(
+        "%c" + "green - Make the console log message green",
+        log.logType("green")
+    )
+    console.log(
+        "%c" + "purple - Make the console log message purple",
+        log.logType("purple")
+    )
+
+
+    document.addEventListener("DOMContentLoaded", onLoad)
+
+    let variableA = 1
+    function onLoad(e) {
+        console.log(
+            "%c" + "onLoad - start - variableA = " + variableA,
+            log.logType("event")
+        )
+
+        variableA = 5
+
+        console.log(
+            "%c" + "onLoad - end - variableA = " + variableA,
+            log.logType("event")
+        )
+    }
+
 </script>
 
 </html>

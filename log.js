@@ -12,7 +12,7 @@ let log = (function () {
 	// ^SETTINGS
 	// Put your log type settings in here
 	// Font color, font size
-	const logLevelList = [
+	const logTypeList = [
 		{
 			logType: "info",
 			description: "Information",
@@ -54,7 +54,7 @@ let log = (function () {
 		{
 			logType: "red",
 			description: "Make the console log message red",
-			color: "#961a16",
+			color: "#ff1a16",
 			size: 15,
 		},
 		{
@@ -71,6 +71,8 @@ let log = (function () {
 		},
 	]
 
+	// Return CSS code given color and size
+	// logType function uses this
 	function logCSS(c, size) {
 		let fs
 		try {
@@ -83,7 +85,7 @@ let log = (function () {
 	}
 
 	function logTypeFind(lType) {
-		return logLevelList.find((logLevel) => logLevel.logType === lType)
+		return logTypeList.find((logLevel) => logLevel.logType === lType)
 	}
 
 	function logType(lType) {
@@ -91,6 +93,8 @@ let log = (function () {
 		return logobj ? logCSS(logobj.color, logobj.size) : logCSS()
 	}
 
+	// Automatically gets the function name of the function the console log
+	// is in. It doesn't work in strict mode
 	function fnName(...args) {
 		let logFnName = ""
 		try {
