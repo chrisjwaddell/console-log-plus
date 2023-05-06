@@ -6,7 +6,7 @@ start of the message to make it easier to debug. (This only works for non-strict
 mode.)
 
 <h2>Logs appear like this</h2>
-![Console Log Plus message example](https://github.com/chrisjwaddell/console-log-plus/blob/main/logs.jpg)
+![](https://github.com/chrisjwaddell/console-log-plus/blob/main/logs.jpg)
 
 ## How to use it
 
