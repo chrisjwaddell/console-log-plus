@@ -13,7 +13,7 @@ mode.)
 In your HTML file. Put at the top of the script tags:
 
 ```
-<script src="https://cdn.rawgit.com/chrisjwaddell/console-log-plus/main/log.js"></script>
+<script src="https://cdn.rawgit.com/chrisjwaddell/console-log-plus/main/logs.js"></script>
 ```
 
 Or download log.js and put it in your project and put at the top of your HTML
