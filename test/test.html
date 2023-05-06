@@ -12,9 +12,11 @@
             background-color: #ffffff;
             margin: 0;
         }
+
     </style>
 
     <script type="application/javascript" src="../log.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/chrisjwaddell/console-log-plus/main/log.js"></script> -->
 </head>
 
 <body>
@@ -36,7 +38,7 @@
 
     console.log("%c" + `b=${5}    ` +
         "This is a new message. New messages are to temporarily see things in the flow of the code.", log
-        .logType("new"))
+            .logType("new"))
 
 
     function anyFunction(a, b, c) {
@@ -57,6 +59,33 @@
         a: 1,
         b: 2
     })
+
+    console.log("%c" + "info - information", log.logType("info"))
+    console.log(
+        "%c" + "event - For events. To help distinguish it from other functions.",
+        log.logType("event")
+    )
+    console.log(
+        "%c" +
+        "function - Helps to put this at the start of a function to see the function flow.",
+        log.logType("function")
+    )
+    console.log("%c" + "error - For errors", log.logType("error"))
+    console.log(
+        "%c" + "new - Working on code temporarily, fix and move on",
+        log.logType("new")
+    )
+    console.log("%c" + "watch - To watch variables", log.logType("watch"))
+    console.log("%c" + "red - Make the console log message red", log.logType("red"))
+    console.log(
+        "%c" + "green - Make the console log message green",
+        log.logType("green")
+    )
+    console.log(
+        "%c" + "purple - Make the console log message purple",
+        log.logType("purple")
+    )
+
 </script>
 
 </html>

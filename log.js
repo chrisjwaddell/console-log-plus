@@ -12,7 +12,7 @@ let log = (function () {
 	// ^SETTINGS
 	// Put your log type settings in here
 	// Font color, font size
-	const logLevelList = [
+	const logTypeList = [
 		{
 			logType: "info",
 			description: "Information",
@@ -21,29 +21,28 @@ let log = (function () {
 		},
 		{
 			logType: "event",
-			description:
-				"For events. To help distinguish it from other functions.",
+			description: "For events. To help distinguish it from other functions.",
 			color: "#0643d4",
-			size: 20,
+			size: 25,
 		},
 		{
 			logType: "function",
 			description:
 				"It helps to put this at the start of a function to see the function flow.",
 			color: "#000259",
-			size: 18,
+			size: 22,
 		},
 		{
 			logType: "error",
 			description: "For errors",
-			color: "#d22b2a",
-			size: 20,
+			color: "#f22b2a",
+			size: 17,
 		},
 		{
 			logType: "new",
 			description: "Working on code temporarily, fix and move on",
-			color: "#cc5522",
-			size: 17,
+			color: "#4499bb",
+			size: 18,
 		},
 		{
 			logType: "watch",
@@ -54,7 +53,7 @@ let log = (function () {
 		{
 			logType: "red",
 			description: "Make the console log message red",
-			color: "#961a16",
+			color: "#ff1a16",
 			size: 15,
 		},
 		{
@@ -71,6 +70,8 @@ let log = (function () {
 		},
 	]
 
+	// Return CSS code given color and size
+	// logType function uses this
 	function logCSS(c, size) {
 		let fs
 		try {
@@ -83,7 +84,7 @@ let log = (function () {
 	}
 
 	function logTypeFind(lType) {
-		return logLevelList.find((logLevel) => logLevel.logType === lType)
+		return logTypeList.find((logLevel) => logLevel.logType === lType)
 	}
 
 	function logType(lType) {
@@ -91,6 +92,8 @@ let log = (function () {
 		return logobj ? logCSS(logobj.color, logobj.size) : logCSS()
 	}
 
+	// Automatically gets the function name of the function the console log
+	// is in. It doesn't work in strict mode
 	function fnName(...args) {
 		let logFnName = ""
 		try {
@@ -106,9 +109,7 @@ let log = (function () {
 					if (el) {
 						if (argList) argList += ", "
 						argList +=
-							el.toString() === "[object Object]"
-								? JSON.stringify(el)
-								: el.toString()
+							el.toString() === "[object Object]" ? JSON.stringify(el) : el.toString()
 					}
 				})
 			}
